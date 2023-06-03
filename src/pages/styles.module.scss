@@ -1,11 +1,44 @@
-.listItem {
+.list-item {
     display: flex;
-    margin: 10px;
+    flex-direction: column;
+    width: 150px;
+    margin: 5px;
+    padding: 5px;
     align-items: center;
+    background-color: rgb(98, 240, 240);
+}
+
+.list-users {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex:3;
+}
+
+.info-block {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  background-color: rgb(250, 182, 182);
+  flex:1;
+}
+
+.container {
+  display: flex;
+  background-color: rgb(197, 243, 243);
 }
 
 .par {
   margin-right: 20px;
   font-weight: bold;
   font-size: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
 }
