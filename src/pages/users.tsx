@@ -15,7 +15,6 @@ export const Users = () => {
       const rez = await fetch(`https://api.github.com/users`);
       const rezReceived = await rez.json();
       setArrayUsers(rezReceived);
-      console.log("users", rezReceived);
     };
     getUsers();
   }, []);
@@ -28,11 +27,8 @@ export const Users = () => {
             <li className={styles["list-item"]} key={user.id}>
               <p className={styles["par"]}>{user.login}</p>
               <NavLink
-                activeStyle={{ color: "red" }}
-                activeClassName=""
-                to={{
-                  pathname: `/${user.id}`,
-                }}
+                activeClassName={styles["active-link"]}
+                to={{pathname: `/${user.id}`}}
               >
                 See more
               </NavLink>

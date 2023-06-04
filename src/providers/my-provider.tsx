@@ -15,7 +15,7 @@ interface IUserProvider {
 }
 
 export const UserProvider = ({ children }: IUserProvider) => {
-  let [arrayUsers, setArrayUsers] = useState([]);
+  const [arrayUsers, setArrayUsers] = useState([]);
 
   return (
     <UserContext.Provider value={{ arrayUsers, setArrayUsers }}>

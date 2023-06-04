@@ -6,8 +6,8 @@ import { Home } from "./pages/home";
 
 function App() {
   return (
-    <UserProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <UserProvider>
         <div className="App">
           <Switch>
             <Route path="/">
@@ -18,8 +18,8 @@ function App() {
             </Route>
           </Switch>
         </div>
-      </BrowserRouter>
-    </UserProvider>
+      </UserProvider>
+    </BrowserRouter>
   );
 }
 
