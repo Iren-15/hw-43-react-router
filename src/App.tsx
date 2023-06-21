@@ -1,29 +1,25 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { Home } from "./pages/home";
-import { UserProfile } from "./pages/userProfile";
 
 import "./App.css";
 import { UserProvider } from "./providers/my-provider";
+import { Home } from "./pages/home";
 
 function App() {
   return (
-    <UserProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <UserProvider>
         <div className="App">
           <Switch>
-            <Route path="/" exact={true}>
+            <Route path="/">
               <Home />
             </Route>
-            <Route path="/:userId" exact={true}>
-              <UserProfile />
-            </Route>
-            <Route path="*" exact={true}>
+            <Route path="*">
               <h1>404</h1>
             </Route>
           </Switch>
         </div>
-      </BrowserRouter>
-    </UserProvider>
+      </UserProvider>
+    </BrowserRouter>
   );
 }
 
