@@ -11,10 +11,8 @@ export const UserProfile = () => {
   });
 
   const userSelectedLogin = userSelected?.login;
-  //console.log("ulogin:", userSelectedLogin);
-  //console.log("params.userId", params.userId);
-
-  const [userSelectedApi, setUserSelectedApi] = useState();
+  
+  const [userSelectedApi, setUserSelectedApi] = useState<any>();
   useEffect(() => {
     const getUsers = async () => {
       const rez = await fetch(
@@ -22,7 +20,6 @@ export const UserProfile = () => {
       );
       const rezReceived = await rez.json();
       setUserSelectedApi(rezReceived);
-      //console.log("rezReceived:", rezReceived);
     };
     getUsers();
   }, [userSelectedLogin]);
@@ -33,6 +30,7 @@ export const UserProfile = () => {
       <p>Login: {userSelectedApi?.login}</p>
       <img src={userSelectedApi?.avatar_url} width="100px" alt="photo"></img>
       <p>Url: {userSelectedApi?.url}</p>
+      <p>Id: {userSelectedApi?.id}</p>
       {/* <p>Login: {userSelected?.login}</p>
       <img src={userSelected?.avatar_url} width="100px" alt="photo"></img>
       <p>Url: {userSelected?.url}</p>
