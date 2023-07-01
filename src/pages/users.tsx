@@ -28,7 +28,7 @@ export const Users = () => {
               <p className={styles["par"]}>{user.login}</p>
               <NavLink
                 activeClassName={styles["active-link"]}
-                to={{pathname: `/${user.id}`}}
+                to={{ pathname: `/${user.id}` }}
               >
                 See more
               </NavLink>

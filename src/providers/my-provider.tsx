@@ -1,8 +1,8 @@
 import { ReactNode, createContext, useState } from "react";
 
 interface IUserContext {
-  arrayUsers: string[];
-  setArrayUsers: (arrayUsers: string[]) => void;
+  arrayUsers: any;
+  setArrayUsers: (arrayUsers: any) => void;
 }
 
 export const UserContext = createContext<IUserContext>({
